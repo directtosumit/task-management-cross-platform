@@ -52,11 +52,31 @@ The application is structured following a **Modular, Clean Architecture** patter
 * Expo CLI / EAS CLI configured.
 * Android Studio / Xcode configured for emulators (or physical device with Expo Go / Dev Client).
 
-#### Environment Configuration Files
-Sample environment variable configurations are provided via root environment files (e.g., `.env`). Switch variables by setting the variant flag:
-* `EXPO_PUBLIC_APP_VARIANT=dev`
-* `EXPO_PUBLIC_APP_VARIANT=staging`
-* `EXPO_PUBLIC_APP_VARIANT=production`
+#### Environment Setup & Configuration
+
+To protect sensitive credentials, actual Firebase configuration files and `google-services.json` are excluded from this public repository. Because this implementation relies on robust client-side local push notifications, **a `google-services.json` file is not required** to run and test the app locally.
+
+To run the app, create a `.env` file in the root directory using the template provided in `.env.example`:
+
+
+##### Choose your environment variant (dev, staging, or production)
+```env
+EXPO_PUBLIC_APP_VARIANT=production
+
+```
+
+##### Firebase Configuration Variables
+
+```env
+EXPO_PUBLIC_FIREBASE_API_KEY=your_api_key_here
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain_here
+EXPO_PUBLIC_FIREBASE_PROJECT_ID=your_project_id_here
+EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=your_storage_bucket_here
+EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id_here
+EXPO_PUBLIC_FIREBASE_APP_ID=your_app_id_here
+EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id_here
+```
+
 
 #### Commands
 

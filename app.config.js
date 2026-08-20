@@ -44,7 +44,7 @@ module.exports = ({ config }) => {
         monochromeImage: "./assets/images/android-icon-monochrome.png",
       },
       predictiveBackGestureEnabled: false,
-      googleServicesFile: "./google-services/google-services.json",
+      // googleServicesFile: "./google-services/google-services.json",
       package: currentEnv.bundleIdentifier,
     },
     ios: {
